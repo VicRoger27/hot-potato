@@ -1,0 +1,16 @@
+let timer = 0
+input.onButtonPressed(Button.A, function () {
+    timer = randint(5, 15)
+    basic.showIcon(IconNames.Chessboard)
+    while (timer > 0) {
+        timer += -1
+        music.playTone(988, music.beat(BeatFraction.Whole))
+        basic.pause(1000)
+    }
+    basic.showIcon(IconNames.Skull)
+    basic.showString("waaaaaaa!")
+    game.gameOver()
+})
+basic.forever(function () {
+	
+})
